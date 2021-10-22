@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gmail</title>
+
+    <!-- google font icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- header starts -->
+
+    <header class="header">
+      <div class="header-left">
+        <span class="material-icons menu-icon"> menu </span>
+        <img
+          src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png"
+          alt=""
+        />
+      </div>
+
+      <div class="header-middle">
+        <span class="material-icons search-icon">search</span>
+        <input
+          class="search"
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search mail"
+        />
+
+        <span class="material-icons tune-icon"> tune </span>
+      </div>
+
+      <div class="header-right">
+        <span class="material-icons help-icon"> help_outline </span>
+        <span class="material-icons settings-icon"> settings </span>
+        <span class="material-icons app-icon"> apps </span>
+        <div class="user-icon">
+          <span class="material-icons"> account_circle </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- header ends -->
+
+    <!-- body -->
+    <section class="main-body">
+      <!-- sidebar-starts -->
+      <aside class="sidebar">
+        <button class="compose-btn" onclick=togglecompose()>
+          <span class="material-icons"> add </span>
+          Compose
+        </button>
+
+        <div class="sidebar-options">
+          <div class="sidebar-option sidebar-option-active">
+            <span class="material-icons"> inbox </span>
+            <h3>Inbox</h3>
+          </div>
+
+          <div class="sidebar-option">
+            <span class="material-icons">star</span>
+            <h3>Starred</h3>
+          </div>
+
+          <div class="sidebar-option">
+            <span class="material-icons"> access_time_filled </span>
+            <h3>Snoozed</h3>
+          </div>
+
+          <div class="sidebar-option">
+            <span class="material-icons"> send </span>
+            <h3>Sent</h3>
+          </div>
+
+          <div class="sidebar-option">
+            <span class="material-icons"> note </span>
+            <h3>Draft</h3>
+          </div>
+
+          <div class="sidebar-option">
+            <span class="material-icons"> label </span>
+            <h3>Boxbe Waiting List</h3>
+          </div>
+
+          <div class="sidebar-option">
+            <span class="material-icons"> expand_more </span>
+            <h3>More</h3>
+          </div>
+
+          <section class="sidebar-footer">
+            <div class="sidebar-footer-icons">
+              <span class="material-icons">person</span>
+              <span class="material-icons">duo</span>
+              <span class="material-icons">phone</span>
+            </div>
+          </section>
+        </div>
+      </aside>
+      <!-- sidebar-ends -->
+
+      <article class="email-list">
+        <!-- select-refresh-prev-next-btn-bar starts -->
+        <div class="email-list-settings">
+          <div class="setting-left">
+            <input
+              type="checkbox"
+              class="selectall-checkbox"
+              name="select-all"
+              id="select-all"
+            />
+            <span class="material-icons drop-down">arrow_drop_down</span>
+            <span class="material-icons refresh">redo</span>
+            <span class="material-icons more-vert">more_vert</span>
+          </div>
+          <div class="setting-right">
+            <span class="material-icons prev">chevron_left</span>
+            <span class="material-icons next">chevron_right</span>
+            <span class="material-icons keyboard-hide">keyboard_hide</span>
+            <span class="material-icons email-list-setting-icon">settings</span>
+          </div>
+        </div>
+        <!-- select-refresh-prev-next-btn-bar ends -->
+
+        <!-- email-lists-section-starts -->
+        <section class="email-lists-section">
+          <div class="section-tab selected-section">
+            <span class="material-icons inbox">inbox</span>
+            <h4 class="primary">Primary</h4>
+          </div>
+
+          <div class="section-tab people-icon-sec">
+            <span class="material-icons">people</span>
+            <h4>Social</h4>
+          </div>
+
+          <div class="section-tab local-offer-icon-sec">
+            <span class="material-icons">local_offer</span>
+            <h4>Promotions</h4>
+          </div>
+        </section>
+
+        <!-- email-lists-row-starts-->
+        <section class="email-lists-list">
+          <div class="email-row">
+            <div class="email-row-options">
+              <input
+                type="checkbox"
+                name="select"
+                id="select"
+                class="select-list"
+              />
+              <span class="material-icons">star_border</span>
+            </div>
+            <h3 class="email-row-title">Javascript Weekly</h3>
+
+            <div class="email-row-message">
+              <h4>
+                Gatsby 4 released -
+                <span class="email-row-description">
+                  React based open-source framework and v4 introduces new
+                  content rendering methods (such as Deferred Static Generation)
+                </span>
+              </h4>
+            </div>
+            <p class="email-row-time">10.00AM</p>
+          </div>
+
+          <div class="email-row">
+            <div class="email-row-options">
+              <input
+                type="checkbox"
+                name="select"
+                id="select"
+                class="select-list"
+              />
+              <span class="material-icons">star_border</span>
+            </div>
+            <h3 class="email-row-title">Times Job</h3>
+
+            <div class="email-row-message">
+              <h4>
+                React Native Developer -
+                <span class="email-row-description">
+                  TimesJobs.com Download App Android Ios Lorem ipsum dolor sit
+                  amet consectetur adipisicing elit. Dolore, eum.
+                </span>
+              </h4>
+            </div>
+            <p class="email-row-time">09.52AM</p>
+          </div>
+
+          <div class="email-row">
+            <div class="email-row-options">
+              <input
+                type="checkbox"
+                name="select"
+                id="select"
+                class="select-list"
+              />
+              <span class="material-icons">star_border</span>
+            </div>
+            <h3 class="email-row-title">Times Job</h3>
+
+            <div class="email-row-message">
+              <h4>
+                Flutter Developer -
+                <span class="email-row-description">
+                  TimesJobs.com Download App Android Ios Lorem ipsum dolor sit
+                  amet consectetur adipisicing elit. Dolore, eum.
+                </span>
+              </h4>
+            </div>
+            <p class="email-row-time">09.48AM</p>
+          </div>
+
+          <div class="email-row">
+            <div class="email-row-options">
+              <input
+                type="checkbox"
+                name="select"
+                id="select"
+                class="select-list"
+              />
+              <span class="material-icons">star_border</span>
+            </div>
+            <h3 class="email-row-title">YourStory Buzz</h3>
+
+            <div class="email-row-message">
+              <h4>
+                🧑‍💻Meet 20+ Unicorn founders at Sparks2021 -
+                <span class="email-row-description">
+                  Click here to see the web version Lorem ipsum dolor sit amet,
+                  consectetur adipisicing elit. Nesciunt laborum ea consectetur
+                  error provident eos!
+                </span>
+              </h4>
+            </div>
+            <p class="email-row-time">09.40AM</p>
+          </div>
+
+          <div class="email-row">
+            <div class="email-row-options">
+              <input
+                type="checkbox"
+                name="select"
+                id="select"
+                class="select-list"
+              />
+              <span class="material-icons">star_border</span>
+            </div>
+            <h3 class="email-row-title">Times Job</h3>
+
+            <div class="email-row-message">
+              <h4>
+                React Native Developer -
+                <span class="email-row-description">
+                  TimesJobs.com Download App Android Ios Lorem ipsum dolor sit
+                  amet consectetur adipisicing elit. Dolore, eum.
+                </span>
+              </h4>
+            </div>
+            <p class="email-row-time">09.28AM</p>
+          </div>
+
+          <div class="email-row">
+            <div class="email-row-options">
+              <input
+                type="checkbox"
+                name="select"
+                id="select"
+                class="select-list"
+              />
+              <span class="material-icons">star_border</span>
+            </div>
+            <h3 class="email-row-title">Times Job</h3>
+
+            <div class="email-row-message">
+              <h4>
+                Flutter Developer -
+                <span class="email-row-description">
+                  TimesJobs.com Download App Android Ios Lorem ipsum dolor sit
+                  amet consectetur adipisicing elit. Dolore, eum.
+                </span>
+              </h4>
+            </div>
+            <p class="email-row-time">09.15AM</p>
+          </div>
+
+          <div class="email-row">
+            <div class="email-row-options">
+              <input
+                type="checkbox"
+                name="select"
+                id="select"
+                class="select-list"
+              />
+              <span class="material-icons">star_border</span>
+            </div>
+            <h3 class="email-row-title">Javascript Weekly</h3>
+
+            <div class="email-row-message">
+              <h4>
+                Parcel 2.0 released -
+                <span class="email-row-description">
+                  React based open-source framework and v4 introduces new
+                  content rendering methods (such as Deferred Static Generation)
+                </span>
+              </h4>
+            </div>
+            <p class="email-row-time">08.40AM</p>
+          </div>
+
+          <div class="email-row">
+            <div class="email-row-options">
+              <input
+                type="checkbox"
+                name="select"
+                id="select"
+                class="select-list"
+              />
+              <span class="material-icons">star_border</span>
+            </div>
+            <h3 class="email-row-title">Medium Daily</h3>
+
+            <div class="email-row-message">
+              <h4>
+                The JS Logo is year old -
+                <span class="email-row-description">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam
+                  repellat quae ea perspiciatis obcaecati cum numquam fugiat
+                  temporibus deserunt ex, quis incidunt dolore.
+                </span>
+              </h4>
+            </div>
+            <p class="email-row-time">08.20AM</p>
+          </div>
+
+          <div class="email-row">
+            <div class="email-row-options">
+              <input
+                type="checkbox"
+                name="select"
+                id="select"
+                class="select-list"
+              />
+              <span class="material-icons">star_border</span>
+            </div>
+            <h3 class="email-row-title">YourStory Buzz</h3>
+
+            <div class="email-row-message">
+              <h4>
+                🧑‍💻Meet 20+ Unicorn founders at Sparks2021 -
+                <span class="email-row-description">
+                  Click here to see the web version Lorem ipsum dolor sit amet,
+                  consectetur adipisicing elit. Nesciunt laborum ea consectetur
+                  error provident eos!
+                </span>
+              </h4>
+            </div>
+            <p class="email-row-time">08.12AM</p>
+          </div>
+
+          <div class="email-row">
+            <div class="email-row-options">
+              <input
+                type="checkbox"
+                name="select"
+                id="select"
+                class="select-list"
+              />
+              <span class="material-icons">star_border</span>
+            </div>
+            <h3 class="email-row-title">Javascript Weekly</h3>
+
+            <div class="email-row-message">
+              <h4>
+                Parcel 2.0 released -
+                <span class="email-row-description">
+                  React based open-source framework and v4 introduces new
+                  content rendering methods (such as Deferred Static Generation)
+                </span>
+              </h4>
+            </div>
+            <p class="email-row-time">08.00AM</p>
+          </div>
+
+          <div class="email-row">
+            <div class="email-row-options">
+              <input
+                type="checkbox"
+                name="select"
+                id="select"
+                class="select-list"
+              />
+              <span class="material-icons">star_border</span>
+            </div>
+            <h3 class="email-row-title">YourStory Buzz</h3>
+
+            <div class="email-row-message">
+              <h4>
+                Meet 20+ Unicorn founders at Sparks2021 -
+                <span class="email-row-description">
+                  Click here to see the web version Lorem ipsum dolor sit amet,
+                  consectetur adipisicing elit. Nesciunt laborum ea consectetur
+                  error provident eos!
+                </span>
+              </h4>
+            </div>
+            <p class="email-row-time">07.12AM</p>
+          </div>
+        </section>
+        <!-- email-lists-row-end-->
+      </article>
+
+      <section class="modal modal-position">
+        <div class="modal-title-bar">
+          <h4>New Message</h4>
+          <div class="min-expand-close">
+            <span class="material-icons">minimize</span>
+            <span class="material-icons">open_in_full</span>
+            <span class="material-icons">close</span>
+          </div>
+        </div>
+
+        <div class="modal-body">
+            <input type="email" name ="email" id="email" placeholder="To">
+            <input type="text" name="subject" id="subject" placeholder="Subject">
+            <textarea name="" id="" cols="20" rows="15"></textarea>
+        </div>
+      </section>
+
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
